@@ -1,0 +1,39 @@
+body {
+            color: blue;
+        }
+        .red-small {
+            font-size: small;
+            color: red;
+        }
+
+        #heading-3 {
+            color: green;
+        }
+
+        .menu ul li {
+            color: pink !important;
+        }
+
+        .menu-items {
+            padding: 0;
+        }
+
+        .menu-items li {
+            color: orange !important;
+            list-style: none;
+            display: inline;
+            background-color: navy;
+            padding: 2px 20px;
+        }
+
+        th {
+            background-color: black;
+            color: white;
+            padding: 3px 7px;
+        }
+
+        td {
+            background-color: red;
+            color: white;
+            padding: 3px 7px;
+        }
