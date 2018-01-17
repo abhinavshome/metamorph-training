@@ -1,0 +1,13 @@
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.col {
+    float: left;
+}
+.col-1 { width: 20%}
+.col-2 { width: 40%}
+.col-3 { width: 60%}
+.col-4 { width: 80%}
+.col-5 { width: 100%}
