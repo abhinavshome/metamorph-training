@@ -1,0 +1,13 @@
+ASSIGNMENT
+
+1. All employees who are not from Pune.
+2. All male employees.
+3. Average age of the company.
+4. Age range of the company 
+OUTPUT :: 21-35
+5. Employee distribution in terms of age group
+{
+    '21-25': ['Anna', 'Neha'],
+    '26-30': ['Ninad', 'Nikhil'],
+    '30+': ['Abhinav','Kewal','Amit']
+}
