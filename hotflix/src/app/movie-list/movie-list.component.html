@@ -1,6 +1,23 @@
-<div>
-  <div class="rating">{{movie.rating}}</div>
-  <img class="thumbnail" src="{{movie.thumbnail}}" />
-  <div class="title">{{movie.title}}</div>
-  <div class="year">{{movie.year}}</div>
+<div class="row" *ngIf="selectedMovie">
+  <img class="col-xs" [src]="selectedMovie.thumbnail" />
+  <div class="col-xs">
+    <div>{{selectedMovie.title}}</div>
+    <div>{{selectedMovie.year}}</div>
+    <button>Play</button>
+  </div>
+</div>
+<div class="row pb10" 
+  *ngFor="let movie of movies"
+  (click)="selectMovie(movie)" 
+  [class.selected]="movie==selectedMovie" 
+>
+  <div class="col-xs">
+    <div class="rating">{{movie.rating | number:'1.1-1'}}</div>
+  </div>
+  <img class="col-xs" [src]="movie.thumbnail" />
+  <div class="col-xs">
+    <div class="title">
+      {{movie.title}} <br/> {{movie.year}}
+    </div>
+  </div>
 </div>

@@ -1,3 +1,4 @@
+import { DUMMY_MOVIES } from './../models/dummyMovies';
 import { Component, OnInit } from '@angular/core';
 import { Movie } from '../models/movie';
 
@@ -7,14 +8,14 @@ import { Movie } from '../models/movie';
   styleUrls: ['./movie-list.component.css']
 })
 export class MovieListComponent implements OnInit {
-  movie: Movie;
+  movies: Movie[];
+  selectedMovie: Movie;
   constructor() { 
-    this.movie = {
-      title: 'The Shawshank Redemption',
-      year: 1994,
-      rating: 9.2,
-      thumbnail: 'https://images-na.ssl-images-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UY67_CR0,0,45,67_AL_.jpg'
-    };
+    this.movies = DUMMY_MOVIES;
+  }
+
+  selectMovie(movie) {
+    this.selectedMovie = movie;
   }
 
   ngOnInit() {

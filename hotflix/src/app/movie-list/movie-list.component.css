@@ -1,4 +1,12 @@
 .rating {
-    float: left;
-    
+    padding: 10px;
+    line-height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.title {
+    padding-left: 10px;
+}
+.selected {
+    background-color: lightblue;
 }
