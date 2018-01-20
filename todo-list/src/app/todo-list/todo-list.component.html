@@ -1,0 +1,19 @@
+parent data <br/>
+done: {{totalDone}} <br/>
+in progress: {{totalInProgress}} <br/>
+todos: <pre>{{todos | json}}</pre> <br/>
+
+
+<summary 
+  [inProgress]="totalInProgress"
+  [done]="totalDone"
+>
+</summary>
+
+<div *ngFor="let todo of todos">
+  <todo-list-item
+    [todo]="todo"
+    (onStatusBtnClick)="toggle($event)"
+  >
+  </todo-list-item>
+</div>

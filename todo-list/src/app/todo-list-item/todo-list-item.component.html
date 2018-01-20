@@ -1,0 +1,5 @@
+<div class="todo-item">
+  <div>{{todo.label}}</div>
+  <div>{{todo.assignee}}</div>
+  <button (click)="handleStatusBtnClick()">{{todo.done ? '&radic;' : 'X'}}</button>
+</div>
