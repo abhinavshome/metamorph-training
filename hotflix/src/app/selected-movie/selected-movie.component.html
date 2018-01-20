@@ -1,0 +1,8 @@
+<div class="row" *ngIf="movie">
+  <img class="col-xs" [src]="movie.thumbnail" />
+  <div class="col-xs">
+    <div>{{movie.title}}</div>
+    <div>{{movie.year}}</div>
+    <button>Play</button>
+  </div>
+</div>
