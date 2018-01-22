@@ -8,10 +8,13 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class MovieListItemComponent implements OnInit {
   @Input() movie: Movie;
+  @Input() selected: boolean;
   @Output() onMovieSelect = new EventEmitter();
+  
   constructor() { }
 
   ngOnInit() {
+    
   }
 
   handleClick(movie) {

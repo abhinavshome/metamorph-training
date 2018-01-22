@@ -1,10 +1,11 @@
 <selected-movie
-  [movie]="selectedMovie"
+  [movie]="selectedMovie"  
 >
 </selected-movie>
 <movie-list-item 
   *ngFor="let movie of movies"
   [movie]="movie"
   (onMovieSelect)="selectMovie($event)"
+  [selected]="selectedMovie==movie"
 >
 </movie-list-item>

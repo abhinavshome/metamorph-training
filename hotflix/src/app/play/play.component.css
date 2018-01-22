@@ -1,0 +1,12 @@
+img{
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+}
+title {
+    font-size: large;
+    color: white;
+    background: #222;
+    backface-visibility: 0.2;
+    margin-top: -100px; 
+}
