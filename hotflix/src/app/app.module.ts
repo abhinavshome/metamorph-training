@@ -1,3 +1,4 @@
+import { MovieService } from './movie.service';
 import { routes } from './routes';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Route } from '@angular/router';
@@ -27,7 +28,9 @@ import { PlayComponent } from './play/play.component';
     BrowserModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [
+    MovieService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

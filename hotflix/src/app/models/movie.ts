@@ -4,4 +4,5 @@ export interface Movie {
     year: number;
     rating: number;
     thumbnail: string;
+    numOfTimesWatched?:number;
 }
