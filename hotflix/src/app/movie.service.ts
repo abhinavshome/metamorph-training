@@ -1,3 +1,4 @@
+import { Http, Headers } from '@angular/http';
 import { DUMMY_MOVIES } from './models/dummyMovies';
 import { Movie } from './models/movie';
 import { Injectable } from '@angular/core';
@@ -6,17 +7,18 @@ import { Injectable } from '@angular/core';
 export class MovieService {
   private movies: Movie[];
   private selectedMovieId: number;
+  private url = 'http://localhost:3000/movies';
 
-  constructor() { 
-    this.movies = DUMMY_MOVIES;
+  constructor(private http: Http) { 
+    this.selectedMovieId = 1;
   }
 
   getMovies() {
-    return this.movies;
+    return this.http.get(this.url);
   }
 
   getMovie(movieId : number) {
-    return this.movies.find(m => m.id == movieId)
+    return this.http.get(this.url + '/' + movieId);
   }
 
   increaseWatchCount(movie: Movie) {
@@ -24,8 +26,8 @@ export class MovieService {
     movie.numOfTimesWatched++;
   }
 
-  getSelectedMovie() {
-    return this.getMovie(this.selectedMovieId);
+  getSelectedMovieId() {
+    return this.selectedMovieId;
   }
 
   setSelectedMovieId(movieId: number) {
@@ -33,6 +35,11 @@ export class MovieService {
   }
 
   addMovie(movie:Movie) {
-    this.movies.push(movie);
+    let options = {
+      headers: new Headers({
+        'Content-Type': 'application/json'
+      })
+    }
+    return this.http.post(this.url, movie, options);
   }
 }

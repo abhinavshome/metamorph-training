@@ -3,6 +3,7 @@ import { routes } from './routes';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Route } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { NgModule, Component } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -13,6 +14,8 @@ import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PlayComponent } from './play/play.component';
 import { MovieAddFormComponent } from './movie-add-form/movie-add-form.component';
+import { TitlecasePipe } from './titlecase.pipe';
+import { HighlightDirective } from './highlight.directive';
 
 
 
@@ -25,12 +28,15 @@ import { MovieAddFormComponent } from './movie-add-form/movie-add-form.component
     AboutComponent,
     NavbarComponent,
     PlayComponent,
-    MovieAddFormComponent
+    MovieAddFormComponent,
+    TitlecasePipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [
     MovieService

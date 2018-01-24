@@ -1,3 +1,4 @@
-View Count {{movie.numOfTimesWatched}}
-<img [src]="movie.thumbnail" />
-<div class="title">{{movie.title}}</div>
+<div *ngIf="movie">
+  <img [src]="movie.thumbnail" />
+  <div class="title">{{movie.title}}</div>
+</div>

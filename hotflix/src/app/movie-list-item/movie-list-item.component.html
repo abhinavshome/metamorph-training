@@ -8,8 +8,8 @@
   </div>
   <img class="col-xs" [src]="movie.thumbnail" />
   <div class="col-xs">
-    <div class="title">
-      {{movie.title}} <br/> {{movie.year}}
+    <div class="title" highlight>
+      {{movie.title | titlecase}} <br/> {{movie.year}}
     </div>
   </div>
 </div>

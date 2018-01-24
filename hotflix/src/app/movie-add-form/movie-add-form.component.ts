@@ -1,7 +1,7 @@
 import { MovieService } from './../movie.service';
 import { Movie } from './../models/movie';
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'movie-add-form',
@@ -20,8 +20,10 @@ export class MovieAddFormComponent implements OnInit {
   }
 
   addMovie() {
-    this.movieService.addMovie(this.newMovie);
-    this.router.navigate(['/movies']);
+    this.movieService
+      .addMovie(this.newMovie)
+      .subscribe(res => this.router.navigate(['/movies']));
+    ;
   }
 
 }
