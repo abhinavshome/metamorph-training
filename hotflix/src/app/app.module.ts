@@ -2,6 +2,7 @@ import { MovieService } from './movie.service';
 import { routes } from './routes';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Route } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import { NgModule, Component } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { SelectedMovieComponent } from './selected-movie/selected-movie.componen
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PlayComponent } from './play/play.component';
+import { MovieAddFormComponent } from './movie-add-form/movie-add-form.component';
 
 
 
@@ -22,11 +24,13 @@ import { PlayComponent } from './play/play.component';
     SelectedMovieComponent,
     AboutComponent,
     NavbarComponent,
-    PlayComponent
+    PlayComponent,
+    MovieAddFormComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule
   ],
   providers: [
     MovieService

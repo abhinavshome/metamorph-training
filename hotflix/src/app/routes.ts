@@ -1,3 +1,4 @@
+import { MovieAddFormComponent } from './movie-add-form/movie-add-form.component';
 import { PlayComponent } from './play/play.component';
 import { Route } from '@angular/router';
 import { AboutComponent } from './about/about.component';
@@ -16,6 +17,10 @@ export const routes : Route[] = [
   {
     path: 'play/:movieId',
     component: PlayComponent
+  },
+  {
+    path: 'add-movie',
+    component: MovieAddFormComponent
   },
   {
     path: '',

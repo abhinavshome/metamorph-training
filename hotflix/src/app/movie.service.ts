@@ -31,4 +31,8 @@ export class MovieService {
   setSelectedMovieId(movieId: number) {
     this.selectedMovieId = movieId;
   }
+
+  addMovie(movie:Movie) {
+    this.movies.push(movie);
+  }
 }
